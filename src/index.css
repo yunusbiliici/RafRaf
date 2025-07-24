@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.bg-custom {
+    background-image: url('./assets/backgroundbir.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -20,7 +20,7 @@ const diller = [
     "Diğer"
 ];
 
-function KitapOlustur() {
+function KitapKaydet() {
     const [form, setForm] = useState({
         kitapAdi: "",
         yazar: "",
@@ -80,6 +80,31 @@ function KitapOlustur() {
             setSuccess("");
             return;
         }
+
+        if (form.okumaListesinde) {
+            const mevcutOkunacaklar = JSON.parse(localStorage.getItem("okunacaklar")) || [];
+
+            const yeniKitap = {
+                kitapAdi: form.kitapAdi,
+                yazar: form.yazar,
+                yayimYili: form.yayimYili,
+                isbn: form.isbn,
+                kategori: form.kategori,
+                aciklama: form.aciklama,
+                sayfaSayisi: form.sayfaSayisi,
+                dil: form.dil,
+                puan: form.puan,
+                okumaListesinde: true
+            };
+
+            const zatenVar = mevcutOkunacaklar.some(k => k.isbn === yeniKitap.isbn);
+
+            if (!zatenVar) {
+                mevcutOkunacaklar.push(yeniKitap);
+                localStorage.setItem("okunacaklar", JSON.stringify(mevcutOkunacaklar));
+            }
+        }
+
         setSuccess("Kitap başarıyla kaydedildi!");
         setForm({
             kitapAdi: "",
@@ -263,4 +288,4 @@ function KitapOlustur() {
     );
 }
 
-export default KitapOlustur;
+export default KitapKaydet;

@@ -165,7 +165,7 @@ export const dummyKitap = [
         kategori: "Bilim Kurgu",
         aciklama: "Çöl gezegeni Arrakis'te geçen epik bilim kurgu hikayesi.",
         gorseller: [
-            "https://covers.openlibrary.org/b/id/7984917-L.jpg"
+            "https://covers.openlibrary.org/b/id/8231991-L.jpg"
         ]
     },
     {

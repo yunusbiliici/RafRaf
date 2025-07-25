@@ -123,8 +123,8 @@ const KitapListesi = () => {
                     onClick={goPrev}
                     disabled={page === 1}
                     className={`px-4 py-2 rounded-md font-semibold transition ${page === 1
-                            ? "bg-gray-700 cursor-not-allowed"
-                            : "bg-purple-600 hover:bg-purple-500"
+                        ? "bg-gray-700 cursor-not-allowed"
+                        : "bg-purple-600 hover:bg-purple-500"
                         } text-white`}
                 >
                     Önceki
@@ -136,8 +136,8 @@ const KitapListesi = () => {
                     onClick={goNext}
                     disabled={page === totalPages}
                     className={`px-4 py-2 rounded-md font-semibold transition ${page === totalPages
-                            ? "bg-gray-700 cursor-not-allowed"
-                            : "bg-purple-600 hover:bg-purple-500"
+                        ? "bg-gray-700 cursor-not-allowed"
+                        : "bg-purple-600 hover:bg-purple-500"
                         } text-white`}
                 >
                     Sonraki

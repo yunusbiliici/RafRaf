@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
+import LandingPage from "./pages/LandingPage"
 import AnaSayfa from "./pages/AnaSayfa";
 import Kitaplar from "./pages/Kitaplar";
 import KitapKaydet from "./pages/KitapKaydet";
@@ -13,7 +14,7 @@ export default function App() {
 
       <main className="pt-35 flex-grow flex items-center justify-center">
         <Routes>
-          <Route path="/" element={<AnaSayfa />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/kitaplar" element={<Kitaplar />} />
           <Route path="/kayıt" element={<KitapKaydet />} />
           <Route path="/okunacaklar" element={<Okunacaklar />} />
